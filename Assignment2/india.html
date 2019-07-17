@@ -16,51 +16,95 @@
 
 	<h1><b>10 Facts about India</b></h1>
 
-<head>
-	<style>
-		ul{
-			list-style-type: none;
- 	 		margin: 0;
-  			padding: 0;
-  			overflow: hidden;
-  			background-color: #333;
-  			position: -webkit-sticky; 
- 			position: sticky;
-  			top: 0;
-  			font-size: 20px;
-		}
+<style>
+	body{
+		font-family: Arial, Helvetica, sans-serif;
+	}
 
-		li{
-			float: left;
-		}
+	.navbar{
+		overflow: hidden;
+		background-color: #333;
+	}
 
-		li a{
-			display: block;
-  			color: white;
-  			text-align: center;
-  			padding: 14px 16px;
-  			text-decoration: none;
-  			size: 60px;
-		}
+	.navbar a {
+	  float: left;
+	  font-size: 20px;
+	  color: white;
+	  text-align: center;
+	  padding: 14px 16px;
+	  text-decoration: none;
+	}
 
-		li a:hover:not(.active){
-			background-color: #111;
-		}
+	.dropdown{
+		float: left;
+		overflow: hidden;
+	}
 
-		.active{
-			background-color: #4CAF50;
-		}
-	</style>
-</head>
+	.dropdown .dropbtn{
+		font-size: 20px;  
+	 	border: none;
+	  	outline: none;
+	  	color: white;
+	  	padding: 14px 16px;
+	  	background-color: inherit;
+		font-family: inherit;
+		margin: 0;
+	}
 
-	<ul>
-		<li><a href="web.html" style="color: white">Home</a></li>
-		<li><a href="animals.html" style="color: white">Animals</a></li>
-		<li><a href="india.html" style="color: white">India</a></li>
-		<li><a href="ocean.html" style="color: white">Oceans</a></li>
-		<li style="float:right"><a class="active" onclick="Back()">Back</a></li>
-	</ul>
+	.navbar a:hover, .dropdown:hover .dropbtn{
+	 	background-color: #111;
+	}
 
+	.dropdown-content{
+		display: none;
+		position: absolute;
+		background-color: #f9f9f9;
+		min-width: 160px;
+		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		z-index: 1;
+	}
+
+	.dropdown-content a{
+		float: none;
+		color: black;
+		padding: 12px 16px;
+		text-decoration: none;
+		display: block;
+		text-align: left;
+	}
+
+	.dropdown-content a:hover{
+		background-color: #ddd;
+	}
+
+	.dropdown:hover .dropdown-content{
+		display: block;
+	}
+
+	img{
+		padding: 5px;
+		margin: 5px;
+		border: 2px solid #323232;
+	}
+</style>
+
+<body>
+	<div class="navbar">
+		<a href="web.html">Home</a>
+		<a href="animals.html">Animals</a>
+		<a href="india.html">India</a>
+		<a href="ocean.html">Oceans</a>
+		<a class="active" onclick="Back()" style="float: right; background-color: #4CAF50">Back</a>
+		<div class="dropdown">
+			<button class="dropbtn">Support 
+	    		<i class="fa fa-caret-down"></i>
+	    	</button>
+	    <div class="dropdown-content">
+	      	<a href="#">Help</a>
+	      	<a href="#">About Us</a>
+	    </div>
+	  	</div> 
+	</div>
 
 	<script>
 		function Back()
@@ -70,7 +114,7 @@
 	</script>
 
 	<font face="Sans serif">
-		<h2 style="padding-left: 350px; padding-right: 500px;padding-top: 50px">
+		<h2 style="padding-left: 350px; padding-right: 200px;padding-top: 50px">
 			<ol>
 				<li>A floating Post Office.</li><br>
 				<img src="o1.jpg" alt="Post office" height="420" width="640">
