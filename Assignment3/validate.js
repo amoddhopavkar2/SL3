@@ -61,3 +61,23 @@ function validatePhoneNo() {
 		alert("Enter a valid phone number");
 	}
 }
+
+function disableCopy() {
+      alert("You cannot perform Copy");
+      return false;
+}
+
+function disablePaste() {
+      alert("You cannot performing Paste");
+      return false;
+}
+
+function disableCut() {
+      alert("You cannot perform Cut");
+      return false;
+}
+
+function disableContextMenu() {
+      alert("You cannot perform right click via mouse as well as keyboard");
+      return false;
+}
