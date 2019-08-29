@@ -5,10 +5,9 @@ function validateForm(){
 	var pswd2 = document.getElementById("pswd2").value;
 	var gen = document.getElementById("gender").value;
 	var terms = document.getElementById("terms").value;
-	var phno = document.getElementById("phno").value;
 
 	var alpha = /^[A-Za-z]/;
-	var num = /^\d{10}$/;
+	var decimal = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/;
 
 	if(name1.match(alpha))
 		return true;
@@ -24,11 +23,17 @@ function validateForm(){
 		alert("Last name must contain only letters");
 	}
 
-	if(phno.match(num))
+	if(pswd1.match(decimal))
 		return true;
 	else{
-		alert("Enter a valid phone number");
+		alert("Password must be 8 to 16 characters long and must contain atleast oone lowercase, one numeric and one special character");
 	}
+
+	if(pswd1 == pswd2)
+		return true;
+
+	else
+		alert("Passwords do not match");
 
 	if(terms.checked)
 		return true;
@@ -44,12 +49,15 @@ function validateForm(){
 			return false;
 		}
 	}
+}
 
-	if(pswd1 == pswd2)
+function validatePhoneNo() {
+	var phno = document.getElementById("phno").value;
+	var num = /^\d{10}$/;
+
+	if(phno.match(num))
 		return true;
-
 	else{
-		alert("Passwords do not match");
-		return false;
+		alert("Enter a valid phone number");
 	}
 }

@@ -70,11 +70,12 @@
 				<br><br>
 				
 				Phone no:<br>
-				<input class="field" type="tel" id="phno" placeholder="10-digit phone no." size="30" pattern="[0-9]{10}">
+				<input class="field" type="tel" id="phno" placeholder="10-digit phone no." size="30" pattern="[0-9]{10}" onblur="validatePhoneNo()">
 				<br><br>
 
 				Address:<br>
 				<textarea name="Address" rows="3" cols="33" placeholder="Address"></textarea>
+				<br><br>
 		</fieldset>
 
 		<fieldset class="formCSS">
@@ -88,7 +89,7 @@
 				<br><br>
 				
 				Re-enter the password:<br>
-				<input class="field" type="password" id="pswd2" placeholder="Min. 8 characters" size="30">
+				<input class="field" type="password" id="pswd2" placeholder="Same as above" size="30">
 				<br><br>
 		</fieldset>
 
